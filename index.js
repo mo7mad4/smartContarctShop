@@ -66,6 +66,29 @@ app.post('/purchasedShopProduct', async (req, res) => {
 });
 
 
+app.get('/', async (req, res) => {
+    // const wallet = new ethers.Wallet(privateKey, provider);
+    // const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, wallet);
+    
+    // const{productName,price,desc} = req.body;
+
+  try{
+
+    // const result = await contract.createShopProduct(productName,parseInt(price),desc);
+
+    res.json({ 
+      status: "Hello"
+     });
+  }catch(e){
+    console.log(e);
+
+    res.json(
+      e
+    );
+  }
+});
+
+
 
 
 app.listen(8080);
